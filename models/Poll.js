@@ -9,7 +9,7 @@ const PollSchema = new mongoose.Schema({
   },
   usedTransactions: [{ type: String }],
   joinCode: { type: String, required: true, index: true, unique: true },
-  duration: { type: Number, required: true, default: 3 },
+  duration: { type: Number, required: true, default: 1 },
   participants: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
   participantScores: [{ type: Number }],
   createdAt: { type: Date, default: Date.now }

@@ -81,7 +81,7 @@ export async function CashOutPolls() {
     $expr: {
       $gte: [
         { $subtract: [now, "$createdAt"] },
-        { $multiply: ["$duration", 60 * 1000] }
+        { $multiply: ["$duration", 1440 * 60 * 1000] }
       ]
     }
   });
